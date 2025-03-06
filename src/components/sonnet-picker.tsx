@@ -198,13 +198,21 @@ const SonnetFalPicker = () => {
 
     try {
       // Find the currently visible card content div
-      const visibleSideDiv = isFlipped
-        ? sonnetRef.current
-            .querySelector('div[style*="transform: rotateY(180deg)"]')
-            .querySelector("div")
-        : sonnetRef.current
-            .querySelector('div[style*="transform: rotateY(0deg)"]')
-            .querySelector("div");
+      let visibleSideDiv = null;
+
+      if (sonnetRef.current) {
+        const rotatedDiv = isFlipped
+          ? sonnetRef.current.querySelector(
+              'div[style*="transform: rotateY(180deg)"]'
+            )
+          : sonnetRef.current.querySelector(
+              'div[style*="transform: rotateY(0deg)"]'
+            );
+
+        if (rotatedDiv) {
+          visibleSideDiv = rotatedDiv.querySelector("div");
+        }
+      }
 
       if (!visibleSideDiv) {
         console.error("Could not find visible side div");
@@ -222,7 +230,7 @@ const SonnetFalPicker = () => {
           // Hide any elements with the class "no-export"
           const noExportElements = clonedDoc.querySelectorAll(".no-export");
           noExportElements.forEach((el) => {
-            el.style.display = "none";
+            (el as HTMLElement).style.display = "none";
           });
         },
       });
