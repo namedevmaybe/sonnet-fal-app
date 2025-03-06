@@ -374,7 +374,7 @@ const SonnetFalPicker = () => {
             }`}
           >
             <Image
-              src="/public/images/Shakespeare.jpg"
+              src="/images/Shakespeare.jpg"
               alt="Shakespeare Illustration"
               fill={true}
               style={{ objectFit: "cover", objectPosition: "50% 20%" }}

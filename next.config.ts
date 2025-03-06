@@ -1,7 +1,8 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  basePath: "/sonnet-fal-app",
+  assetPrefix: "/sonnet-fal-app",
 };
 
 export default nextConfig;
