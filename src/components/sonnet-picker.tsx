@@ -374,7 +374,7 @@ const SonnetFalPicker = () => {
             }`}
           >
             <Image
-              src="https://raw.githubusercontent.com/namedevmaybe/sonnet-fal-app/refs/heads/master/public/Images/Shakespeare.jpg?token=GHSAT0AAAAAAC72E37YH3TRNLHAZDAWNIU6Z6J443Q"
+              src="https://raw.githubusercontent.com/namedevmaybe/sonnet-fal-app/master/public/Images/Shakespeare.jpg"
               alt="Shakespeare Illustration"
               fill={true}
               style={{ objectFit: "cover", objectPosition: "50% 20%" }}
