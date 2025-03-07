@@ -367,7 +367,7 @@ const SonnetFalPicker = () => {
         </div>
 
         {/* Header Image */}
-        <div className="h-48 mb-8 flex justify-center items-center relative">
+        <div className="h-48 mb-8 flex justify-center items-center relative rounded-lg overflow-hidden">
           <div
             className={`h-full w-full flex justify-center items-center border-b-2 ${
               isDark ? "border-amber-800" : "border-amber-700"
